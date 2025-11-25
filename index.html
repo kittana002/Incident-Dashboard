@@ -101,13 +101,13 @@
         // --- DATA ---
         const STATS = {
             total: 1210,
-            inProgress: 610,
-            done: 600
+            inProgress: 649,
+            done: 606
         };
 
         const CAUSE_RAW = [
-            { name: "Link upNo Up/Down", count: 373 },
-            { name: "Port Sim Router One 540 Up - Down", count: 103 },
+            { name: "Link upNo Up/Down", count: 372 },
+            { name: "Port Sim Router One 540 Up - Down", count: 110 },
             { name: "Alarm Power", count: 33 },
             { name: "Port Sim Router Cisco 819 Up - Down", count: 32 },
             { name: "Router ONE540 เสีย", count: 23 },
@@ -124,8 +124,8 @@
         ];
 
         const RESOLUTION_RAW = [
-            { name: "Link upNo Up/Down", count: 377 },
-            { name: "Swap Sim To Ais Sim", count: 75 },
+            { name: "Link upNo Up/Down", count: 376 },
+            { name: "Swap Sim To Ais Sim", count: 82 },
             { name: "Change to Router huawei AR", count: 73 },
             { name: "Alarm Power Clear", count: 33 },
             { name: "RESET (โดยเจ้าหน้าที่หน้างาน)", count: 18 },
@@ -164,7 +164,7 @@
                 <div>
                     <p className="text-slate-500 text-sm font-medium mb-1">{title}</p>
                     <h3 className="text-3xl font-bold text-slate-800">{value}</h3>
-                    <p className={`text-xs mt-2 font-medium ${subtext.includes('+') ? 'text-green-600' : 'text-slate-400'}`}>
+                    <p className={`text-xs mt-2 font-medium ${subtext.includes('+') ? 'text-green-606' : 'text-slate-400'}`}>
                         {subtext}
                     </p>
                 </div>
@@ -182,7 +182,7 @@
                         <span className="text-sm font-medium text-slate-700 flex items-center gap-2 truncate pr-2">
                             {label}
                         </span>
-                        <span className="text-sm font-medium text-slate-600 whitespace-nowrap">{value} ({percentage}%)</span>
+                        <span className="text-sm font-medium text-slate-606 whitespace-nowrap">{value} ({percentage}%)</span>
                     </div>
                     <div className="w-full bg-slate-100 rounded-full h-2 overflow-hidden">
                         <div 
@@ -266,12 +266,12 @@
                         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                             <div>
                                 <h1 className="text-3xl font-bold text-slate-800 flex items-center gap-3">
-                                    <BarChart2 className="w-8 h-8 text-blue-600" />
+                                    <BarChart2 className="w-8 h-8 text-blue-606" />
                                     Incident Dashboard
                                 </h1>
                                 <p className="text-slate-500 mt-1">รายงานสรุปปัญหาและการแก้ไข (Raw Data)</p>
                             </div>
-                            <div className="bg-white px-4 py-2 rounded-lg shadow-sm border border-slate-200 text-sm text-slate-600 flex items-center gap-2">
+                            <div className="bg-white px-4 py-2 rounded-lg shadow-sm border border-slate-200 text-sm text-slate-606 flex items-center gap-2">
                                 <Clock className="w-4 h-4" />
                                 Last Updated: Now
                             </div>
@@ -348,14 +348,14 @@
                                     <div className="flex bg-slate-100 p-1 rounded-lg self-start shrink-0">
                                         <button 
                                             onClick={() => setActiveTab('causes')}
-                                            className={`px-4 py-1.5 rounded-md text-sm font-medium transition-all flex items-center gap-2 ${activeTab === 'causes' ? 'bg-white text-blue-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
+                                            className={`px-4 py-1.5 rounded-md text-sm font-medium transition-all flex items-center gap-2 ${activeTab === 'causes' ? 'bg-white text-blue-606 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
                                         >
                                             <AlertTriangle className="w-4 h-4" />
                                             สาเหตุ ({CAUSE_RAW.length})
                                         </button>
                                         <button 
                                             onClick={() => setActiveTab('resolutions')}
-                                            className={`px-4 py-1.5 rounded-md text-sm font-medium transition-all flex items-center gap-2 ${activeTab === 'resolutions' ? 'bg-white text-purple-600 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
+                                            className={`px-4 py-1.5 rounded-md text-sm font-medium transition-all flex items-center gap-2 ${activeTab === 'resolutions' ? 'bg-white text-purple-606 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}
                                         >
                                             <Wrench className="w-4 h-4" />
                                             วิธีการแก้ไข ({RESOLUTION_RAW.length})
